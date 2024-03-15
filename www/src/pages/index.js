@@ -179,26 +179,25 @@ export default props => {
             }}>
             Download
           </Heading>
-          <Button
-            as={GatsbyLink}
-            mr={2}
-            to='/json'
-            state={{ colors }}>
+          <GatsbyLink to='/json' state={{ colors }} mr={2}>
             JSON
-          </Button>
-          <Button
-            as={GatsbyLink}
-            to='/css'
-            state={{ colors }}>
+          </GatsbyLink>
+          <GatsbyLink to='/css' state={{ colors }} mr={2}>
             CSS
-          </Button>
+          </GatsbyLink>
         </Box>
         <Box as='footer' py={4}>
-          <Link href='https://github.com/jxnblk/palx' mr={2}>
+          <Link href='https://github.com/abmprottoy/palx' mr={2}>
             GitHub
           </Link>
-          <Link href='https://jxnblk.com'>
+          <Link href='https://github.com/jxnblk/palx' mr={2}>
+            Original GitHub Public Archive
+          </Link>
+          <Link href='https://jxnblk.com' mr={2}>
             Made by Jxnblk
+          </Link>
+          <Link href='https://twitter.com/abm_prottoy'>
+            Forked by abmprottoy
           </Link>
         </Box>
       </Box>

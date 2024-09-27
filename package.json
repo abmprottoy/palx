@@ -8,6 +8,7 @@
     "build": "yarn workspace www build"
   },
   "dependencies": {
-    "palx": "^1.1.0"
+    "palx": "^1.1.0",
+    "react-color": "^2.19.3"
   }
 }

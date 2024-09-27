@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 export default props => {
-  if (!props.location.state) return false
-  const { colors } = props.location.state
-  if (!colors) return 'todo: redirect'
-  const json = JSON.stringify(colors, null, 2)
+  const query = new URLSearchParams(props.location.search);
+  const colors = JSON.parse(query.get('colors') || 'null');
+
+  if (!colors) return 'todo: redirect';
+
+  const json = JSON.stringify(colors, null, 2);
 
   return (
     <pre>
       {json}
     </pre>
-  )
-}
+  );
+};

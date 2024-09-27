@@ -179,12 +179,19 @@ export default props => {
             }}>
             Download
           </Heading>
-          <GatsbyLink to='/json' state={{ colors }} mr={2}>
+          <Button
+            as={GatsbyLink}
+            mr={2}
+            to={`/json?colors=${encodeURIComponent(JSON.stringify(colors))}`}>
             JSON
-          </GatsbyLink>
-          <GatsbyLink to='/css' state={{ colors }} mr={2}>
+          </Button>
+
+          <Button
+            as={GatsbyLink}
+            mr={2}
+            to={`/css?colors=${encodeURIComponent(JSON.stringify(colors))}`}>
             CSS
-          </GatsbyLink>
+          </Button>
         </Box>
         <Box as='footer' py={4}>
           <Link href='https://github.com/abmprottoy/palx' mr={2}>
